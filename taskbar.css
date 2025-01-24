@@ -4,7 +4,7 @@
     bottom: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     width: 100%;
     height: var(--tbSize);
     box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.4);
@@ -23,6 +23,7 @@
 
 .taskbar:hover .tbIndicator {
     opacity: 0;
+    left: 5px;
 }
 
 .taskbar:hover .statusArea {
