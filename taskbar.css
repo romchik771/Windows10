@@ -34,7 +34,7 @@
 .tbIndicator {
     width: 30px;
     height: 5px;
-    left: 12px;
+    left: 7px;
     position: absolute;
     background: var(--tb-indicator);
     border-radius: 100px;
