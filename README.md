@@ -1,20 +1,20 @@
-# Windows10x
-An (im)perfect replica of Windows 10X hosted in complete HTML, CSS, and JS.
+# Windows10
+An (im)perfect replica of Windows 10 hosted in complete HTML, CSS, and JS.
 
 # Quick Info
-This project is imperfect, as the web standards don't allow me to create a perfect replication of Windows 10x.
+This project is imperfect, as the web standards don't allow me to create a perfect replication of Windows 10.
 However, I will be monitoring it closely, so if you want to make a pull request, go right ahead. I'll review the changes, and apply them as I see fit.
 Major changes will be noted on twitter, including photos and some videos.
 
-The creation of version 2 of this project has allowed me to completely replicate the UI of 10x.
-Unfortunately, since Microsoft put Windows 10x on the backburner, this is the closest thing we have to a fully working 'replica' of Windows 10x.
-I plan on replicating as much of the visual & functional pieces as I possibly can. It's far from perfect, but if you want to get a feel for Windows 10x, and how it looks and works, this might be a good place to start!
+The creation of version 2 of this project has allowed me to completely replicate the UI of 10.
+Unfortunately, since Microsoft put Windows 10 on the backburner, this is the closest thing we have to a fully working 'replica' of Windows 10.
+I plan on replicating as much of the visual & functional pieces as I possibly can. It's far from perfect, but if you want to get a feel for Windows 10, and how it looks and works, this might be a good place to start!
 
 As always, following me on Twitter will allow you to get updates on the project. If you don't know what's new, or if it seems like something may've changed, check my Twitter for details and information.
 You can also comment or DM me at any time for feature requests, or if you want to contribute to the project. I accept any and all help!
 
 # Using the site
-The site is hosted at https://futur3sn0w.me/Windows10x/ 
+The site is hosted at https://futur3sn0w.me/Windows10/ 
 
 ### Taskbar
 The bar at the bottom (called the 'taskbar' or 'multibar') shows an indicator in the center, and the time on the right. Hovering over the indicator (or anywhere on the multibar) will expand it, revealing the Start (Launcher) and Task View buttons. It also expands the clock, and reveals the icons for the Action Center, where you can access your toggles and sliders.
