@@ -1031,44 +1031,33 @@ if (e.keyCode == 13)
         }
     </script>
 
-    <script>
-        var startMenu = document.getElementById("startMenu");
-        var wpStartMenu = document.getElementById("wpStartMenu");
-        var wpStartMenu0 = document.getElementById("wpStartMenu0");
-        var wpIcons0 = document.getElementById("wpsmbIcons");
-        var wpIcons = document.getElementById("wpsmbIcons0");
+<script>
+    var startMenu = document.getElementById("startMenu");
+    var wpStartMenu = document.getElementById("wpStartMenu");
+    var wpStartMenu0 = document.getElementById("wpStartMenu0");
+    var wpIcons = document.getElementById("wpsmbIcons");
+    var wpIcons0 = document.getElementById("wpsmbIcons0");
 
-        function launcherMed() {
-            startMenu.style.width = "700px";
-            wpStartMenu.style.width = "120px";
-            wpStartMenu0.style.width = "120px";
-            wpIcons.style.gap = "16% 7%";
-            wpIcons0.style.gap = "16% 7%";
-            document.cookie = "launcherSize=medium";
+    function launcherSmall() {
+        startMenu.style.width = "500px";
+        wpStartMenu.style.width = "80px";
+        wpStartMenu0.style.width = "80px";
+        wpIcons.style.gap = "16% 5%";
+        wpIcons0.style.gap = "16% 5%";
+        document.cookie = "launcherSize=small";
+    }
+
+    function loadLauncherSize() {
+        const launcherSizeC = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('launcherSize='))
+            .split('=')[1];
+
+        if (launcherSizeC === "small") {
+            launcherSmall();
         }
-
-        function launcherLarge() {
-            startMenu.style.width = "900px";
-            wpStartMenu.style.width = "160px";
-            wpStartMenu0.style.width = "160px";
-            wpIcons.style.gap = "16% 10%";
-            wpIcons0.style.gap = "16% 10%";
-            document.cookie = "launcherSize=large";
-        }
-
-        function loadLauncherSize() {
-            const launcherSizeC = document.cookie
-                .split('; ')
-                .find(row => row.startsWith('launcherSize='))
-                .split('=')[1];
-
-            if (launcherSizeC === "medium") {
-                launcherMed();
-            } else if (launcherSizeC === "large") {
-                launcherLarge();
-            }
-        }
-    </script>
+    }
+</script>
 
     <script>
         function accentColor1() {
@@ -1371,83 +1360,70 @@ if (e.keyCode == 13)
         }
     </script>
 
-    <script>
-        let root = document.documentElement;
-        var ahCheckbox = document.getElementById("autoHideCheckbox");
-        var taskbar = document.getElementById("taskbar");
+<script>
+    let root = document.documentElement;
+    var ahCheckbox = document.getElementById("autoHideCheckbox");
+    var taskbar = document.getElementById("taskbar");
 
-        function autoHideToggle() {
-            if (ahCheckbox.checked == true) {
-                taskbar.addEventListener("mouseenter", showTaskbar);
-                taskbar.addEventListener("mouseleave", hideTaskbar);
-                hideTaskbar();
-                document.getElementById("ahLabel").innerHTML = "On"
-                document.cookie = "autoHideTB=true";
-            } else {
-                taskbar.addEventListener("mouseenter", showTaskbar);
-                taskbar.removeEventListener("mouseleave", hideTaskbar);
-                showTaskbar();
-                document.getElementById("ahLabel").innerHTML = "Off"
-                document.cookie = "autoHideTB=false";
-            }
+    function autoHideToggle() {
+        if (ahCheckbox.checked == true) {
+            taskbar.addEventListener("mouseenter", showTaskbar);
+            taskbar.addEventListener("mouseleave", hideTaskbar);
+            hideTaskbar();
+            document.getElementById("ahLabel").innerHTML = "On"
+            document.cookie = "autoHideTB=true";
+        } else {
+            taskbar.addEventListener("mouseenter", showTaskbar);
+            taskbar.removeEventListener("mouseleave", hideTaskbar);
+            showTaskbar();
+            document.getElementById("ahLabel").innerHTML = "Off"
+            document.cookie = "autoHideTB=false";
         }
+    }
 
-        function hideTaskbar() {
-            taskbar.style.height = "30px";
-            document.getElementById("tbButtons").style.opacity = "0";
-            document.getElementById("tbIndicator").style.opacity = "1";
-            document.getElementById("statusArea").style.paddingRight = "0";
-            document.getElementById("statusArea").style.alignItems = "center";
-            document.getElementById("statusArea").style.flexDirection = "row";
+    function hideTaskbar() {
+        taskbar.style.height = "30px";
+        document.getElementById("tbButtons").style.opacity = "0";
+        document.getElementById("tbIndicator").style.opacity = "1";
+        document.getElementById("statusArea").style.paddingRight = "0";
+        document.getElementById("statusArea").style.alignItems = "center";
+        document.getElementById("statusArea").style.flexDirection = "row";
+    }
 
+    function showTaskbar() {
+        taskbar.style.height = "var(--tbSizeM)";
+        document.getElementById("tbButtons").style.opacity = "1";
+        document.getElementById("tbIndicator").style.opacity = "0";
+        document.getElementById("statusArea").style.paddingRight = "10px";
+        document.getElementById("statusArea").style.alignItems = "flex-end";
+        document.getElementById("statusArea").style.flexDirection = "column-reverse";
+    }
+
+    function autoHideSave() {
+        const tbAutoHide = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('autoHideTB='))
+            .split('=')[1];
+
+        if (tbAutoHide === "true") {
+            ahCheckbox.checked = true;
+        } else {
+            ahCheckbox.checked = false;
         }
+    }
 
-        function showTaskbar() {
-            taskbar.style.height = "var(--tbSizeM)";
-            document.getElementById("tbButtons").style.opacity = "1";
-            document.getElementById("tbIndicator").style.opacity = "0";
-            document.getElementById("statusArea").style.paddingRight = "10px";
-            document.getElementById("statusArea").style.alignItems = "flex-end";
-            document.getElementById("statusArea").style.flexDirection = "column-reverse";
-        }
+    function setTBSize() {
+        root.style.setProperty('--tbSizeM', '40px');
+    }
 
-        function autoHideSave() {
-            const tbAutoHide = document.cookie
-                .split('; ')
-                .find(row => row.startsWith('autoHideTB='))
-                .split('=')[1];
+    function smallTB() {
+        root.style.setProperty('--tbSizeM', '40px');
+        document.cookie = "tbSize=40px";
+    }
 
-            if (tbAutoHide === "true") {
-                ahCheckbox.checked = true;
-            } else {
-                ahCheckbox.checked = false;
-            }
-        }
-
-        function setTBSize() {
-            const tbSizeCookie = document.cookie
-                .split('; ')
-                .find(row => row.startsWith('tbSize='))
-                .split('=')[1];
-
-            root.style.setProperty('--tbSizeM', tbSizeCookie);
-        }
-
-        function smallTB() {
-            root.style.setProperty('--tbSizeM', '40px');
-            document.cookie = "tbSize=40px";
-        }
-
-        function medTB() {
-            root.style.setProperty('--tbSizeM', '50px');
-            document.cookie = "tbSize=50px";
-        }
-
-        function largeTB() {
-            root.style.setProperty('--tbSizeM', '60px');
-            document.cookie = "tbSize=60px";
-        }
-    </script>
+    // Set the default taskbar size to small
+    setTBSize();
+</script>
     <script>
         //function that display value
         function dis(val)
