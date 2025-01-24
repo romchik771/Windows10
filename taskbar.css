@@ -23,7 +23,6 @@
 
 .taskbar:hover .tbIndicator {
     opacity: 0;
-    left: 5px;
 }
 
 .taskbar:hover .statusArea {
@@ -35,6 +34,7 @@
 .tbIndicator {
     width: 30px;
     height: 5px;
+    left: 5px;
     background: var(--tb-indicator);
     border-radius: 100px;
     transition: opacity .1s;
