@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Seg;
+    src: url(../fonts/normal.ttf);
+}
+
+@font-face {
+    font-family: Segb;
+    src: url(../fonts/bold.ttf);
+}
+
+@font-face {
+    font-family: Segsb;
+    src: url(../fonts/semi.ttf);
+}
+
+@font-face {
+    font-family: FLNTFILL;
+    src: url(../fonts/fluent_filled.ttf);
+}
+
+@font-face {
+    font-family: FLNTREG;
+    src: url(../fonts/fluent_regular.ttf);
+}
