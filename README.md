@@ -1,4 +1,4 @@
-![Логотип](bootBlue.svg)
+![Логотип Windows](bootBlue.svg)
 # Windows 10 в браузере
 
 ## Краткая информация о проекте
