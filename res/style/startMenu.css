@@ -113,7 +113,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: center;
+    justify-content: left;
     align-content: flex-start;
     gap: 7px;
     height: 300px;
