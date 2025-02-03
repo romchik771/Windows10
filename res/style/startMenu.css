@@ -10,7 +10,6 @@
     max-height: 100%;
     max-width: 100%;
     background-color: var(--startMenu);
-    backdrop-filter: blur(90px) saturate(400%);
     border-radius: var(--objectRadi);
     overflow: hidden;
     opacity: 0;
