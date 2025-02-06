@@ -17,55 +17,9 @@
     color: var(--font2);
 }
 
-.smTop {
-    position: absolute;
-    top: 0;
-    height: 17%;
-    width: 100%;
-    background: rgba(0, 0, 0, .07);
-    display: flex;
-    place-items: center;
-    place-content: center;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
-}
-
-.searchBar {
-    resize: none;
-    width: 80%;
-    height: 50px;
-    border-radius: var(--buttonRadi);
-    border: none;
-    font: 400 16px Segsb;
-    line-height: 50px;
-    padding: 0 50px 0 50px;
-    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
-    transition: box-shadow .2s;
-    background-color: var(--searchBar);
-    color: var(--font2);
-}
-
 ::placeholder {
     color: var(--font2);
     opacity: .4;
-}
-
-.searchBar:focus {
-    outline: none;
-    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.3);
-}
-
-.smtIcon {
-    position: absolute;
-    font: 400 23px FLNTREG;
-}
-
-.searchIcon {
-    transform: rotateY(180deg);
-    left: 12%;
-}
-
-.micIcon {
-    right: 12%;
 }
 
 .smBottom {
@@ -92,21 +46,6 @@
 
 .ss1Lbl {
     font: 100 16px Segb;
-}
-
-.ss1Btn {
-    margin-left: auto;
-    font: 400 13px Segsb;
-    background-color: var(--searchBar);
-    color: var(--font2);
-    padding: 4px 15px;
-    border-radius: 100px;
-    transition: background-color .1s;
-    cursor: pointer;
-}
-
-.ss1Btn:hover {
-    background-color: var(--startMenu);
 }
 
 .smbSect2 {
@@ -324,99 +263,6 @@
     height: 1px;
     margin-top: 20px;
     background-color: rgba(0, 0, 0, .2);
-}
-
-.smbSect3 {
-    height: 300px;
-}
-
-.ss3Lbl {
-    font: 100 16px Segb;
-    position: absolute;
-    padding: 30px 60px;
-}
-
-.ss3Lbl2 {
-    font: 100 14px Seg;
-    position: absolute;
-    width: 100%;
-    padding: 70px 0;
-    text-align: center;
-}
-
-.recentTiles {
-    position: absolute;
-    display: grid;
-    place-content: center;
-    place-items: center;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    width: 100%;
-    margin: 110px auto;
-    gap: 6px;
-}
-
-.recTile {
-    width: 180px;
-    height: 50px;
-    padding: 10px;
-    border-radius: var(--buttonRadi);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: 43px;
-    background-position: 10px 50%;
-    transition: background-color .1s, background-size .2s;
-    text-decoration: none;
-    color: var(--font2);
-}
-
-.recTile:active {
-    background-size: 35px;
-}
-
-.recTile::before {
-    font: 100 13px Segsb;
-    padding-left: 55px;
-    content: attr(data-label1);
-}
-
-.recTile::after {
-    opacity: 60%;
-    font: 100 12px Segsb;
-    padding-left: 55px;
-    content: attr(data-subLabel);
-}
-
-.rt1 {
-    background-image: url(../img/Icons/Reddit.png);
-}
-
-.rt2 {
-    background-image: url(../img/Icons/Spotify.png);
-}
-
-.rt3 {
-    background-image: url(../img/Icons/Twitter.png);
-}
-
-.rt4 {
-    background-image: url(../img/Icons/YouTube.png);
-}
-
-.rt5 {
-    background-image: url(../img/Icons/Office.png);
-}
-
-.rt6 {
-    background-image: url(../img/Icons/Netflix.png);
-    background-size: 25px;
-    background-position: 15px 50%;
-}
-
-.rt6:active {
-    background-size: 17px;
 }
 
 .iHide{
