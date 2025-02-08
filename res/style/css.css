@@ -94,7 +94,7 @@ body {
         --tb-hov: #605D5E;
         --icn-hov: #ffffff26;
         --btn-hov: #4b4b4b;
-        --start-btn: url(../img/btnIcons/startLight.svg);
+        --start-btn: url(res/img/btnIcons/startLight.svg);
         --tskvw-btn: url(../img/btnIcons/taskviewLight.svg);
         --storeIcon: url(../img/Icons/MicrosoftStoreLight.png);
         --stickiesIcon: url(../img/Icons/MicrosoftStickyNotesLight.png);
