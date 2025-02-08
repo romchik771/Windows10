@@ -79,8 +79,8 @@ body {
      :root {
         --scrollbar: rgba(0, 0, 0, 0.4);
         --scrollbar-hov: rgba(0, 0, 0, 0.6);
-        --taskbar: #3a3a3acb;
-        --startMenu: #272727ad;
+        --taskbar: #3a3a3a;
+        --startMenu: #272727;
         --searchBar: #ffffff25;
         --searchBar2: #00000094;
         --searchBar-border: #4b4b4b;
