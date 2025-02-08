@@ -376,13 +376,13 @@
         function startBtn() {
             if (document.getElementById("startMenu").style.opacity === "0") {
                 document.getElementById("startMenu").style.opacity = "1";
-                document.getElementById("startMenu").style.transform = "translateX(-50%) translateY(0)";
+                document.getElementById("startMenu").style.transform = "unset";
                 startButton.removeEventListener("mouseenter", colorStartBtn);
                 startButton.removeEventListener("mouseleave", resetStartBtn);
                 colorStartBtn();
             } else {
                 document.getElementById("startMenu").style.opacity = "0";
-                document.getElementById("startMenu").style.transform = "translateX(-50%) translateY(100%)";
+                document.getElementById("startMenu").style.transform = "translateY(100%)";
                 startButton.addEventListener("mouseenter", colorStartBtn);
                 startButton.addEventListener("mouseleave", resetStartBtn);
                 resetStartBtn();
@@ -392,7 +392,7 @@
         document.addEventListener('mouseup', function(e) {
             var container = document.getElementById("startMenu");
             if (!container.contains(e.target)) {
-                container.style.transform = "translateX(-50%) translateY(100%)";
+                container.style.transform = "translateY(100%)";
                 container.style.opacity = '0';
                 startButton.addEventListener("mouseenter", colorStartBtn);
                 startButton.addEventListener("mouseleave", resetStartBtn);
