@@ -376,7 +376,7 @@
         function startBtn() {
             if (document.getElementById("startMenu").style.opacity === "0") {
                 document.getElementById("startMenu").style.opacity = "1";
-                document.getElementById("startMenu").style.transform = "unset";
+                document.getElementById("startMenu").style.transform = "translateY(0%)";
                 startButton.removeEventListener("mouseenter", colorStartBtn);
                 startButton.removeEventListener("mouseleave", resetStartBtn);
                 colorStartBtn();
