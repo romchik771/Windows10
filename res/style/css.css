@@ -68,6 +68,7 @@ body {
         --icn-hov: #ffffff60;
         --btn-hov: #eeeeee;
         --start-btn: url(../../res/img/btnIcons/startDark.svg);
+        --start-btn2: url(res/img/btnIcons/startDark.svg);
         --tskvw-btn: url(../img/btnIcons/taskviewDark.svg);
         --storeIcon: url(../img/Icons/MicrosoftStoreDark.png);
         --stickiesIcon: url(../img/Icons/MicrosoftStickyNotesDark.png);
