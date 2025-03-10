@@ -272,6 +272,12 @@
         height: calc(100% - 0px);
         bottom: unset;
     }
+    .smBottom {
+        height: 100%;
+    }
+    .smbSect1 {
+        display: none;
+    }
     .smbSect1,
     .ss2Icon {
         width: 20%;
